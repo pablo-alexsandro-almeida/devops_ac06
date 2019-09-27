@@ -10,7 +10,7 @@ def test_deposito():
 	
 def test_alterarNome():
 	contaCorrente = ContaCorrente(1222, "pablo")
-	contaCorrente.alterarNome("julio")
+	contaCorrente.alterar_Nome("julio")
 	assert contaCorrente.nomeCorrentista == "julio", " Era Pablo"
 
 def test_saque():

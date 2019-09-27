@@ -1,17 +1,29 @@
 class ContaCorrente:
-
+	'''
+	classe para conta corrente
+	'''
     def __init__(self, numero, nomeCorrentista, saldo=0.0):
-        self.numero = numero
-        self.alterarNome(nomeCorrentista)
+		
+	    self.numero = numero
+        self.alterar_Nome(nomeCorrentista)
         self.saldo = saldo
 
-    def alterarNome(self, nomeCorrentista):
+    def alterar_Nome(self, nomeCorrentista):
+		'''
+		metodo parar o nome 
+		'''
         self.nomeCorrentista = nomeCorrentista
 
     def deposito(self, valor):
+		'''
+		metodo para fazer deposito
+		'''
         self.saldo += valor
 
     def saque(self, valor):
+		'''
+		metodo para fazer saque
+		'''
         self.saldo -= valor
 
 # TESTE DA CLASSE
