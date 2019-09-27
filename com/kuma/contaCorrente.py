@@ -2,9 +2,8 @@ class ContaCorrente:
 	'''
 	classe para conta corrente
 	'''
-    def __init__(self, numero, nomeCorrentista, saldo=0.0):
-		
-	    self.numero = numero
+    def __init__(self, numero, nomeCorrentista, saldo=0.0):		
+	self.numero = numero
         self.alterar_Nome(nomeCorrentista)
         self.saldo = saldo
 
