@@ -2,7 +2,7 @@ def converteHora(hora24, minuto24):
 	'''
 	Esta funão tem como objetivo de converter horas 
 	'''
-    if hora24 > 23 or hora24 < 0 or minuto24 < 0 or minuto24 > 59:
+    if (hora24 > 23 or hora24 < 0 or minuto24 < 0 or minuto24 > 59):
     	return None
 
     if hora24 < 12:
