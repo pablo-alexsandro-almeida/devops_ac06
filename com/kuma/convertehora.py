@@ -1,8 +1,11 @@
 def valorpagamento(valor, diasatraso):
+    '''
+    funçao para calcular o valor de converte
+    '''
 
-    if (valor < 0):
+    if valor < 0:
         return None
-    if (diasatraso > 0):
+    if diasatraso > 0:
         multa = valor * 0.03
         adicionalatraso = valor * (diasatraso * 0.01)
         return valor + multa + adicionalatraso
