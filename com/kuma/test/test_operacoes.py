@@ -1,7 +1,7 @@
 import pytest
 from com.kuma.calcula_parcela import valorPagamento
 from com.kuma.contaCorrente import ContaCorrente
-from com.kuma.convertehora import converteHora
+from com.kuma.Convertehora import convertehora
 
 def test_deposito():
 	contaCorrente = ContaCorrente(1222, "pablo")
