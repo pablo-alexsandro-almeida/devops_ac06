@@ -88,4 +88,3 @@ def test_semAtraso():
 
 	operacao = valorPagamento(100,0)
 	assert operacao == 100, "Deveria ser 100"
-
