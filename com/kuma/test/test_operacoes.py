@@ -1,5 +1,5 @@
 import pytest
-from com.kuma.calcula_parcela import valorPagamento
+from com.kuma.calcula_parcela import valor_pagamento
 from com.kuma.contaCorrente import ContaCorrente
 from com.kuma.Convertehora import converteHora
 
