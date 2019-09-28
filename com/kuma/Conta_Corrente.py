@@ -1,17 +1,17 @@
-class conta_corrente:
+class contacorrente:
     '''
     conta corrente
     '''
-    def __init__(self, numero, nomeCorrentista, saldo=0.0):
+    def __init__(self, numero, nomecorrentista, saldo=0.0):
         self.numero = numero
-        self.alterarNome(nomeCorrentista)
+        self.alterarNome(nomecorrentista)
         self.saldo = saldo
 
-    def alterarNome(self, nomeCorrentista):
+    def alterarnome(self, nomecorrentista):
         '''
         alterar nome
         '''
-        self.nomeCorrentista = nomeCorrentista
+        self.nomecorrentista = nomecorrentista
 
     def deposito(self, valor):
         '''
