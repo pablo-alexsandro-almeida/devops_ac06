@@ -1,4 +1,4 @@
-def convertehora(hora24, minuto24):
+def converteHora(hora24, minuto24):
     '''
     função para converter hora
     '''
