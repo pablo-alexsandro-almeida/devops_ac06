@@ -1,4 +1,4 @@
-# devops_ac06
-Pablo Alexsandro de Almeida 1900959  
-Marcelo Suezawa Vieira 1900736  
-Luiz Felipe de Carvalho Miranda 1900699  
+# devops_ac05
+PABLO ALEXSANDRO DE ALMEIDA 1900959  
+MARCELO SUEZAWA VIEIRA 1900736  
+FERNANDA REIS DA SILVA 1900020   
