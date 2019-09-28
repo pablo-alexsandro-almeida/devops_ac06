@@ -3,85 +3,89 @@ from com.kuma.calcula_parcela import valorPagamento
 from com.kuma.contaCorrente import ContaCorrente
 from com.kuma.convertehora import converteHora
 
-
 def test_deposito():
     '''
-    teste 
+    teste
     '''
-    contacorrente = contacorrente(1222, "pablo")
-    contacorrente.deposito(100)
-    assert contacorrente.saldo == 100, "Valor e 100"
 
-
-def test_alterarnome():
+	contaCorrente = ContaCorrente(1222, "pablo")
+	contaCorrente.deposito(100)
+	assert contaCorrente.saldo == 100, "Valor e 100"
+	
+def test_alterarNome():
     '''
-    teste 
-    '''
-    contacorrente = contacorrente(1222, "pablo")
-    contacorrente.alterar_Nome("julio")
-    assert contacorrente.nomeCorrentista == "julio", " Era Pablo"
+    teste
+    ''' 
 
+	contaCorrente = ContaCorrente(1222, "pablo")
+	contaCorrente.alterarNome("julio")
+	assert contaCorrente.nomeCorrentista == "julio", " Era Pablo"
 
 def test_saque():
     '''
-    teste 
+    teste
     '''
-    contacorrente = contacorrente(1222, "pablo")
-    contacorrente.saque(100)
-    assert contacorrente.saldo == -100, "Valor e 100"
+
+	contaCorrente = ContaCorrente(1222, "pablo")
+	contaCorrente.saque(100)
+	assert contaCorrente.saldo == -100, "Valor e 100"
+	
+
+def test_retornarNone():
+    '''
+    teste
+    '''
+
+	operacao = converteHora(24, 0)
+	assert operacao == None, "Deveria ser None"
+	
+def test_retornarMeiodia():
+    '''
+    teste
+    '''
+    
+    
+	operacao = converteHora(0, 10)
+	assert operacao == "12:10 AM", "Deveria ser 12:10 AM"
+
+def test_retornarOnze():
+    '''
+    teste
+    '''
+
+	operacao = converteHora(9, 10)
+	assert operacao == "09:10 AM", "Deveria ser 9:10 AM"
+	
+    
+def test_retornarNone():
+    '''
+    teste
+    '''
+
+	operacao = converteHora(13, 10)
+	assert operacao == "01:10 PM", "Deveria ser 1:10 AM"
+
+    
+
+def test_doisdiasAtraso():
+    '''
+    teste
+    '''
+
+	operacao = valorPagamento(100,2)
+	assert operacao == 105, "Deveria ser 105"
 
 
-def test_retornarnone():
-    '''
-    teste 
-    '''
-    operacao = convertehora(24, 0)
-    assert operacao == None, "Deveria ser None"
+def test_valorZero():
+	operacao = valorPagamento(-1,0)
+	assert operacao == None, "Deveria ser 0"
+	
 
+def test_semAtraso():
+    '''
+    teste
+    '''
 
-def test_retornarmeiodia():
-    '''
-    teste 
-    '''
-    operacao = convertehora(0, 10)
-    assert operacao == "12:10 AM", "Deveria ser 12:10 AM"
+	operacao = valorPagamento(100,0)
+	assert operacao == 100, "Deveria ser 100"
 
-
-def test_retornaronze():
-    '''
-    teste 
-    '''
-    operacao = convertehora(9, 10)
-    assert operacao == "09:10 AM", "Deveria ser 9:10 AM"
-
-
-def test_retornarnone():
-    '''
-    teste 
-    '''
-    operacao = convertehora(13, 10)
-    assert operacao == "01:10 PM", "Deveria ser 1:10 AM"
-
-
-def test_doisdiasatraso():
-    '''
-    teste 
-    '''
-    operacao = valorpagamento(100, 2)
-    assert operacao == 105, "Deveria ser 105"
-
-
-def test_valorzero():
-    '''
-    teste 
-    '''
-    operacao = valorpagamento(-1, 0)
-    assert operacao == None, "Deveria ser 0"
-
-
-def test_sematraso():
-    '''
-    teste 
-    '''
-    operacao = valorpagamento(100, 0)
-    assert operacao == 100, "Deveria ser 100"
